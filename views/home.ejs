@@ -1,0 +1,60 @@
+
+<%- include("partials/header"); -%>
+
+<main role="main">
+
+  <div id="jumbotron" class="jumbotron jumbotron-fluid">
+      <div id="home-text" class="container">
+        <h1 class="display-1">WELCOME!! </h1>
+        <p class="lead"><%= home %></p>
+      </div>
+  </div>
+
+
+    <div class="container">
+      <h1 class="title main-title">ALL ENTRIES</h1>
+      <div class="row">
+        <% blogPosts.forEach(function(post) { %>
+          <div class="col-md-4">
+            <div class="card mb-4 shadow-sm">
+              <% if (post.image != null) { %>
+                  <img src="images/<%= post.image %>" class="bd-placeholder-img card-img-top" width="100%" height="225" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"></img>
+              <% } else { %>
+                <img src="data:image/<%=post.imageFile.contentType%>;base64, <%=post.imageFile.data.toString('base64')%>" class="bd-placeholder-img card-img-top" width="100%" height="225" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" >
+              <% } %>
+
+              <div class="card-body">
+                <p class="card-text"><%= post.title %>
+                    <br>
+                    <small class="card-date"><%= post.postedDate %></small>
+                </p>
+
+                <% if (post.content) { %>
+                    <% if (post.content.length < 100) { %>
+                      <p class="card-text"> <%= post.content %> </p>
+                    <% } else { %>
+                      <p class="card-text"> <%= post.content.substring(0, 100) + "..." %> </p>
+                    <% } %>
+                <% } %>
+
+
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+
+                    <button type="button" class=" button btn btn-sm btn-outline-secondary"><a style="text-decoration: none" href="/posts/<%= post._id %>">VIEW</a></button>
+                    <button type="button" class="button btn btn-sm btn-outline-secondary"><a style="text-decoration: none" href="/update/<%= post._id %>">EDIT</a></button>
+                    <button type="button" class="button btn btn-sm btn-outline-secondary"><a style="text-decoration: none" href="/delete/<%= post._id %>">DELETE</a></button>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      <%  }) %>
+
+
+      </div>
+    </div>
+
+
+<%- include("partials/footer"); -%>

@@ -1,0 +1,162 @@
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+    margin: 0 0 200px;
+}
+
+.bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+@media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+      font-size: 3.5rem;
+    }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+
+
+#jumbotron {
+  height: 800px;
+  background-image: url("https://images.pexels.com/photos/1696735/pexels-photo-1696735.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
+  background-size: cover;
+  
+}
+
+#home-text {
+   color: #52BE80  ;
+   margin: 200px;
+   font-weight: 800px;
+   padding-left: 600px;
+   padding-bottom: 400px;
+} 
+
+.card:hover {
+  transform: scale(1.05);
+  opacity: 0.85;
+}
+
+.title {
+  font-weight: 500px;
+  margin-top: 50px;
+  margin-left: 82px;
+}
+
+.main-title {
+  margin-left: -1px;
+  margin-bottom: 30px;
+}
+
+.compose {
+  width: 85%;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+
+.form-group {
+  margin-top: 30px;
+}
+
+.image-grid {
+  margin-top: 10px;
+}
+
+.page-container {
+  margin-top: 100px;
+}
+
+.page-content {
+  margin-left: 85px;
+  font-weight: 300px;
+  margin-top: 5px;
+  white-space: pre-line;
+}
+
+
+
+#post-content {
+  margin-top: -40px;
+  margin-left: -50px;
+}
+
+.navbar {
+    opacity: 1;
+    transition: opacity 0.5s ease;
+    color: #52BE80;
+}
+
+.button{
+  margin:10px;
+}
+.navbar-hide {
+    pointer-events: none;
+    opacity: 0;
+}
+
+.input:hover {
+  opacity: 0.8;
+}
+
+.column {
+  float: left;
+  width: 50%;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.resize {
+  width: 600px;
+  height: auto;
+}
+
+#postGrid {
+  margin-left: 70px;
+}
+
+#customFile {
+  margin-top: -30px;
+  width: 70%;
+}
+
+.date {
+  margin-left: 85px;
+
+}
+.contact{
+  display: flex;
+  padding-left: 239px;
+}
+
+.con{
+  margin-left: 10px;
+  margin-bottom: 2px;
+  display: flex;
+  align-items: center;
+}
+
+
+footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 50px;
+  width: 100%;
+  text-align: center;
+  background-color: #D5F5E3;
+}
